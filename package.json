@@ -1,6 +1,6 @@
 {
   "name": "react-use-gestures",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An utility function to use with React hooks that plays well with https://github.com/drcmda/react-spring 's useSpring()",
   "main": "index.js",
   "scripts": {
