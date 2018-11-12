@@ -2,8 +2,12 @@
   "name": "react-use-gestures",
   "version": "0.1.1",
   "description": "An utility function to use with React hooks that plays well with https://github.com/drcmda/react-spring 's useSpring()",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "npm run build:only -- --watch --source-maps inline",
+    "build": "npm run clean && NODE_ENV=production npm run build:only",
+    "build:only": "babel index.mjs -d dist",
+    "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +27,11 @@
   "bugs": {
     "url": "https://github.com/dotlouis/react-use-gestures/issues"
   },
-  "homepage": "https://github.com/dotlouis/react-use-gestures#readme"
+  "homepage": "https://github.com/dotlouis/react-use-gestures#readme",
+  "dependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "babel-preset-minify": "^0.5.0"
+  }
 }
